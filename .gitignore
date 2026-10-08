@@ -1,7 +1,6 @@
 # Python bytecode / caches
 __pycache__/
 *.py[cod]
-*.pyo
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
@@ -10,6 +9,9 @@ __pycache__/
 .venv/
 venv/
 env/
+
+# Notebooks
+.ipynb_checkpoints/
 
 # Secrets / local config
 .env
@@ -28,5 +30,6 @@ Thumbs.db
 build/
 dist/
 
-# NOTE: insurance_model.pkl and feature_order.json are intentionally NOT
-# ignored -- the app needs them at runtime.
+# NOTE: data/insurance.csv (~55 KB) and models/ (~3 MB) are intentionally
+# committed: the app needs the trained model at runtime, and the data makes
+# training reproducible.
